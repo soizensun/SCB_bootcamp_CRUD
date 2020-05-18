@@ -35,7 +35,6 @@ public class CustomerService {
     }
 
     public Customer updateCustomer(Long id, Customer customer){
-//        Customer customerRes = customerRepository.findAllById(id);
         return customerRepository.findAllById(id) != null ? customerRepository.save(customer) : null;
     }
 

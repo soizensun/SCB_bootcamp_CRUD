@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8082
   servlet:
     contextPath: /api
 
@@ -22,3 +22,12 @@ spring:
       name: zen
       password: password
       roles: ADMIN
+
+  loan:
+    host: http://localhost:8081/api/loan
+    endpoint:
+      getInfo: info
+
+restTemplate:
+  connectionTimeOut: 5000
+  readTimeOut: 10000

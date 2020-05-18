@@ -32,7 +32,7 @@ public class CustomerController {
     }
 
     @GetMapping(params = "name")
-    public ResponseEntity<?> getCustomerById(@RequestParam(value = "name") String name){
+    public ResponseEntity<?> getCustomerByName(@RequestParam(value = "name") String name){
         List<Customer> customer = customerService.getCustomerName(name);
         return customer != null && !customer.isEmpty() ? ResponseEntity.ok(customer) : ResponseEntity.notFound().build();
     }
